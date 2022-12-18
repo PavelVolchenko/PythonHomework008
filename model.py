@@ -31,7 +31,7 @@ def find_worker_by_title(data):
 def find_worker_by_salary(data):
     print('\n===== Зарплата =====')
     salary_min, salary_max = filter(str.isdigit,
-                                    sorted(input('-> Задайте верхний и нижний порог зарплаты через пробел: ').split()))
+                                    input('-> Задайте верхний и нижний порог зарплаты через пробел: ').split())
     [print(*i) for i in map(dict.values,
                             filter(lambda x: float(salary_min) < x.get('salary') < float(salary_max), data))]
 
